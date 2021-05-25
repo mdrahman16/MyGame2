@@ -28,7 +28,7 @@ public class ItemCreation
         excaliburSword = new Item("excaliburSword", "The legendary Excalibur", 100);
         key = new Item("key", "It has a shape of a heart", 100);
         frontGateKey = new Item("frontGateKey", "To open the front gate door", 100);
-        magicalKnife = new Item("Magical knife", "Knife with magical powers", 100);
+        magicalKnife = new Item("MagicalKnife", "Knife with magical powers", 100);
         
         allItemsInGame.add(excaliburSword);
         allItemsInGame.add(key);
