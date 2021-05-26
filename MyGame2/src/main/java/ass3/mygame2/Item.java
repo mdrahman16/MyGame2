@@ -36,10 +36,7 @@ public class Item
         return description;
     }
     
-    /**
-     * 
-     *  
-     */
+   
     public int getPower(){
         return destructivePower;
     }

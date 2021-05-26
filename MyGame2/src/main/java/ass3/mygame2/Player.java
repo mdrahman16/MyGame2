@@ -20,14 +20,7 @@ public class Player
         playerItem = new ArrayList();
     }
     
-    /**
-    * Write a description of class Player here.
-    *
-    * @param (your name)
-    * @return (a version number or a date)
-    * @exception (a version number or a date)
-    * @see (a version number or a date)
-    */
+   
     
     public void addItemInventory(Item item){
         playerItem.add(item);
