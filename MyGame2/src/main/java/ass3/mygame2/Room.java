@@ -20,12 +20,7 @@ public class Room
     private ArrayList<Item> roomItem;
     private HashMap<Room, Item> roomHashMapItem;
 
-    /**
-     * Create a room described "description". Initially, it has
-     * no exits. "description" is something like "a kitchen" or
-     * "an open court yard".
-     * @param description The room's description.
-     */
+   
     public Room(String name, String description, boolean isLocked) 
     {
         this.description = description;
