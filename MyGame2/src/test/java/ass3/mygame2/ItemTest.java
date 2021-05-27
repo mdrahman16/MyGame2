@@ -10,12 +10,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author Nigel Franciscus
+ * @author Narender
  */
 public class ItemTest {
     
     Item item;
     
+    /**
+     *initialize Item object
+     */
     public ItemTest() {
         item = new Item("gun","this is a gun", 0);
     }
@@ -28,7 +31,7 @@ public class ItemTest {
         
         //Item item = new Item("gun","this is a gun", 0);
         String expected = "gun";
-        //String expected = "guns";     // failed test
+      
         String actual = item.getName();
         
         assertEquals(expected, actual);

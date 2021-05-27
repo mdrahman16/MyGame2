@@ -18,6 +18,10 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PlayerTest {
    Item item; 
+
+    /**
+     * Initialize Item object
+     */
     public PlayerTest() {
         item= new Item("gun", "It is a gun", 50);
     }
@@ -26,6 +30,7 @@ public class PlayerTest {
 
     /**
      * Test of addItemInventory method, of class Player.
+     * add item in player inventory
      */
     @Test
     public void testAddItemInventory() {
@@ -40,6 +45,7 @@ public class PlayerTest {
 
     /**
      * Test of removeItemInventory method, of class Player.
+     * remove item from player inventory
      */
     @Test
     public void testRemoveItemInventory() {
@@ -52,6 +58,7 @@ public class PlayerTest {
 
    /**
      * Test of getPlayerItem method, of class Player.
+     * test player exist item list in inventory. it must be null because we removed items by calling testremoveiteminventory() 
      */
     @Test
     public void testGetPlayerItem() {

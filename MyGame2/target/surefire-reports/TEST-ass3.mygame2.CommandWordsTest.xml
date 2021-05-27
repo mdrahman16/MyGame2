@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="ass3.mygame2.CommandWordsTest" time="0" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="ass3.mygame2.CommandWordsTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+10"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="C:\netbeans-11.1\netbeans\java\maven\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="12"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\netbeans-11.1\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\netbeans-11.1\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-12.0.2"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -61,6 +61,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+  <testcase classname="ass3.mygame2.CommandWordsTest" name="ass3.mygame2.CommandWordsTest.testShowAll" time="0.011"/>
   <testcase classname="ass3.mygame2.CommandWordsTest" name="ass3.mygame2.CommandWordsTest.testIsCommand" time="0"/>
-  <testcase classname="ass3.mygame2.CommandWordsTest" name="ass3.mygame2.CommandWordsTest.testShowAll" time="0"/>
 </testsuite>

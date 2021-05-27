@@ -1,15 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ass3.mygame2;
 
 import java.util.Scanner;
 
 /**
- *
+ * Provided introduction to the user how to play this game.Before the start, Introduction will be shown to user.
+ * 
  * @author Narender
+ * @version 1.5.0
  */
 public class GameIntroduction {
 
@@ -26,7 +24,9 @@ public class GameIntroduction {
             + "Item availiable in game: excaliburSword,front gate key, magical knife, key \n"
             + "Command that can be used in game: Go, quit, help, take, drop, use, inventory and inspect \n"
             + "-----------------------------------------------------------------------------------------");
-
+/**
+ * Display game introduction. after introduction if user press 'y' then user can play this game
+ */
     public void gameIntro() {
         System.out.println(gameIntro);
         System.out.println("Please press  Y to  start the game and press any key to Quit the game \n Your input: ");
