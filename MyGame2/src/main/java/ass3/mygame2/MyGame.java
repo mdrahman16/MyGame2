@@ -1,7 +1,11 @@
 
 package ass3.mygame2;
 
-
+/**
+ * It is the main class of the game
+ * @author Narender
+ * @version 1.5.0
+ */
 
 
 

@@ -20,6 +20,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ItemCreationTest {
     ArrayList<Item> listOfItem;
     Item key;
+
+    /**
+     *initialize Item and array list object
+     */
     public ItemCreationTest() {
         listOfItem = new ArrayList();
         key = new Item("key", "It has a shape of a heart", 100);
@@ -29,6 +33,7 @@ public class ItemCreationTest {
    
     /**
      * Test of createItems method, of class ItemCreation.
+     * add Item object in array list
      */
     @Test
     public void testCreateItems() {
@@ -40,6 +45,7 @@ public class ItemCreationTest {
 
     /**
      * Test of getItem method, of class ItemCreation.
+     * test if the same item is still in the list
      */
     @Test
     public void testGetItem() {

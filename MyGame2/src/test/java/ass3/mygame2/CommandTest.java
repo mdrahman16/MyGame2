@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ass3.mygame2;
 
 
@@ -10,14 +6,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *
+ *this class is used to test CommandTet
  * @author Narender
  */
 public class CommandTest {
 
     Command instance;
 
+    /**
+     *Initialize Command object.
+     */
     public CommandTest() {
+        // "go" is first word and "north" is second
         instance = new Command("go", "north");
     }
 

@@ -1,20 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ass3.mygame2;
-
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
+ * This class hold the main logic of the game.Room items, room keys, time,
+ * player and user command are initialized in the class.
  *
- *
- 
+ * @author narender
+ * @version 1.5.0
  */
-
 public class Game {
 
     private Parser parser;
@@ -40,12 +35,16 @@ public class Game {
         currentRoom = rooms.getRoom("castle");  // start game outside
         //System.out.println(createRoom.getcurrentRoom().getName());
     }
-    
+
+    /**
+     * return current room
+     *
+     * @return current room
+     */
     public Room getCurrentRoom() {
         return currentRoom;
     }
 
-    
     /**
      * Main play routine. Loops until end of play.
      */
@@ -68,11 +67,6 @@ public class Game {
      * Print out the opening message for the player.
      */
     private void printWelcome() {
-        System.out.println();
-        System.out.println("some background here");
-        System.out.println("objective here");
-        System.out.println("include some necessary information (e.g. time limit)");
-        System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
 
@@ -112,7 +106,6 @@ public class Game {
         return wantToQuit;
     }
 
-    
     /**
      * Print out some help information. Here we print some stupid, cryptic
      * message and a list of the command words.
@@ -130,6 +123,9 @@ public class Game {
         parser.showCommands();
     }
 
+    /**
+     * print player inventory
+     */
     private void printInventory() {
         System.out.println(player.printAllInventory());
     }
@@ -165,6 +161,11 @@ public class Game {
         }
     }
 
+    /**
+     *this method  interpret user input.if user provide one word command then system ask user to enter again else
+     * player pick the item in the room if it exist
+     * @param command user command to take item in the room
+     */
     private void takeItem(Command command) {
         if (!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
@@ -174,7 +175,6 @@ public class Game {
 
         String itemFromCommand = command.getSecondWord();
         Item currentItem = currentRoom.getRoomItem(itemFromCommand);
-        //getPlayerItem(itemFromCommand);
 
         if (currentItem == null) {
             System.out.println("You can't take nothing, no?");
@@ -183,11 +183,14 @@ public class Game {
             currentRoom.removeItemInRoom(currentItem);
             player.addItemInventory(currentItem);
 
-            //roomItem.remove(currentItem);
-            //addItemInventory(currentItem);
-            //System.out.println(currentRoom.getLongDescription());
         }
     }
+    
+     /**
+     *this method  interpret user input.if user provide one word command then system ask user to enter again else
+     * player drop the item from inventory
+     * @param command user command to drop item from inventory
+     */
 
     private void dropItem(Command command) {
         if (!command.hasSecondWord()) {
@@ -207,12 +210,13 @@ public class Game {
             player.removeItemInventory(currentItem);
             currentRoom.addItemInRoom(currentItem);
 
-            //removeItemInventory(currentItem);
-            //roomItem.put(currentItem, currentRoom);
-            //System.out.println(currentRoom.getLongDescription());
         }
     }
-
+/**
+ * Player must provide two word command !!
+ * 
+ * @param command is user input
+ */
     private void useItem(Command command) // use key
     {
         if (!command.hasSecondWord()) {
@@ -226,20 +230,10 @@ public class Game {
 
         if (currentItem == null) {
             System.out.println("You can't use nothing, no?");
-        } else {
-            // you want make sure that the currentRoom is the room where you want to open the door (before the nextdoor).
-            // you want to make sure the currentItem matches the key to open the next door.
-
-            //if(currentRoom.getName().equals("castle") && currentItem.getName().equals("key")){
-            //.setLockedStatus(false);
-            System.out.println("You just used the " + currentItem.getName());
-
-            //if(currentRoom.getName().equals("frontYard") && currentItem.getName().equals("item1")){
-            //frontGate.setLockedStatus(false);
-            // if(currentRoom.getName().equals("castle")){
-            // //currentRoom.checkRoom("castle");
-            // roomKey.get(currentItem).setLockedStatus(false);
-            // }
+        } 
+        else {
+           
+            System.out.println("You just used the " + currentItem.getName()); 
             System.out.println("You cannot use this item here");
 
         }
@@ -262,4 +256,3 @@ public class Game {
     }
 
 }
-
